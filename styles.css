@@ -502,16 +502,117 @@ textarea:focus-visible {
   background: linear-gradient(135deg, #f7fbff, #cddfed);
 }
 
+.side-light {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  right: -64px;
+  width: 52px;
+  border: 8px solid var(--product-color);
+  background: linear-gradient(135deg, #f7fbff, #cddfed);
+}
+
 .pseudo-slider {
   inset: 28px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   border-width: 10px;
 }
 
 .pseudo-slider span {
   border-right: 8px solid var(--product-color);
   background: linear-gradient(135deg, #f9fcff, #d7e7f2);
+}
+
+.pseudo-screen,
+.pseudo-shutter,
+.pseudo-garage,
+.pseudo-fence,
+.pseudo-pergola {
+  position: absolute;
+  inset: 0;
+  border: 10px solid var(--product-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(216, 233, 244, .82));
+  box-shadow: 0 20px 34px rgba(26, 39, 52, .18);
+}
+
+.pseudo-screen::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  background:
+    repeating-linear-gradient(0deg, rgba(30, 39, 48, .16) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, rgba(30, 39, 48, .16) 0 1px, transparent 1px 10px);
+}
+
+.pseudo-shutter {
+  inset: 18% 7% 0;
+  border-top-width: 34px;
+  background: repeating-linear-gradient(0deg, var(--product-dark) 0 15px, var(--product-color) 15px 21px);
+}
+
+.pseudo-garage {
+  inset: 12% 0 0;
+  border-width: 9px;
+  background: repeating-linear-gradient(0deg, var(--product-dark) 0 30px, var(--product-color) 30px 37px);
+}
+
+.pseudo-garage::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  top: 45%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #111820;
+}
+
+.pseudo-fence {
+  inset: 30% 0 20%;
+  border-width: 8px;
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.pseudo-fence span {
+  background: var(--product-color);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .24);
+}
+
+.pseudo-pergola {
+  inset: 18% 0 16%;
+  border: 0;
+  background: transparent;
+}
+
+.pseudo-pergola::before,
+.pseudo-pergola::after {
+  content: "";
+  position: absolute;
+  background: var(--product-color);
+}
+
+.pseudo-pergola::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 42px;
+  background: repeating-linear-gradient(90deg, var(--product-color) 0 28px, var(--product-dark) 28px 38px);
+  transform: skewX(-14deg);
+  transform-origin: left center;
+}
+
+.pseudo-pergola::after {
+  left: 28px;
+  right: 28px;
+  bottom: 0;
+  height: 190px;
+  border-left: 12px solid var(--product-color);
+  border-right: 12px solid var(--product-color);
+  background: transparent;
 }
 
 .floor-shadow {
@@ -620,7 +721,7 @@ textarea {
 }
 
 .segmented {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .segmented button,
@@ -630,6 +731,10 @@ textarea {
   border-radius: 6px;
   color: #27313b;
   background: #fff;
+}
+
+.segmented button.hidden-choice {
+  display: none;
 }
 
 .segmented button.active,
@@ -689,6 +794,15 @@ textarea {
 
 .size-grid {
   grid-template-columns: 1fr 1fr;
+}
+
+.length-field {
+  display: none;
+}
+
+.length-field.show {
+  display: grid;
+  grid-column: 1 / -1;
 }
 
 .check-list {
@@ -792,7 +906,7 @@ textarea {
 }
 
 .products-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .product-card {
@@ -858,7 +972,7 @@ textarea {
   width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 38px;
 }
 
@@ -956,6 +1070,50 @@ textarea {
   background: #edf1f5;
 }
 
+.legal-header {
+  grid-template-columns: 1fr auto;
+}
+
+.legal-header .brand {
+  justify-self: start;
+}
+
+.legal-page {
+  padding: 128px 24px 72px;
+  background: var(--soft);
+}
+
+.legal-document {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(30, 45, 62, .07);
+}
+
+.legal-document h1 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.05;
+}
+
+.legal-document h2 {
+  margin: 28px 0 8px;
+  font-size: 22px;
+}
+
+.legal-document p {
+  margin: 0 0 12px;
+  color: #4f5b67;
+}
+
+.legal-document a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
 @media (max-width: 1020px) {
   .hero-visual {
     opacity: .22;
@@ -964,6 +1122,10 @@ textarea {
 
   .configurator-shell {
     grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .preview-panel {

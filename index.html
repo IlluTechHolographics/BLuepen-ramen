@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bluepen | Configureer ramen en deuren op maat</title>
-    <meta name="description" content="Configureer ramen, deuren en schuiframen bij Bluepen in Gent. Kies materiaal, kleur, afmetingen en opties en vraag een duidelijke offerte aan.">
+    <meta name="description" content="Configureer ramen, deuren, schuiframen, horren, rolluiken, garagepoorten, afsluitingen en pergola's bij Bluepen in Gent.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -38,9 +38,13 @@
       <nav>
         <a class="active" href="#home">Hoofdpagina</a>
         <a href="#configurator">Configurator</a>
+        <a href="#producten">Producten</a>
         <a href="#werkwijze">Werkwijze</a>
         <a href="#contact" data-open-modal="quote">Offerte aanvragen</a>
         <a href="#contact" data-open-modal="meeting">Plaatsbezoek</a>
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="voorwaarden.html">Algemene voorwaarden</a>
+        <a href="cookies.html">Cookiebeleid</a>
       </nav>
     </aside>
 
@@ -67,7 +71,7 @@
             <a class="quick-card" href="#configurator">
               <span>01</span>
               <h2>Product configurator</h2>
-              <p>Kies ramen, deuren of schuiframen en stel alles visueel samen.</p>
+              <p>Kies ramen, deuren, schuiframen, rolluiken, garagepoorten en meer.</p>
             </a>
             <button class="quick-card" type="button" data-open-modal="quote">
               <span>02</span>
@@ -113,6 +117,11 @@
                 <button class="active" type="button" data-value="ramen">Ramen</button>
                 <button type="button" data-value="deuren">Deuren</button>
                 <button type="button" data-value="schuiframen">Schuiframen</button>
+                <button type="button" data-value="horren">Horren</button>
+                <button type="button" data-value="rolluiken">Rolluiken</button>
+                <button type="button" data-value="garagepoorten">Garagepoorten</button>
+                <button type="button" data-value="afsluitingen">Afsluitingen</button>
+                <button type="button" data-value="pergolas">Pergola's</button>
               </div>
             </fieldset>
 
@@ -127,6 +136,7 @@
                 <button class="active" type="button" data-value="PVC">PVC</button>
                 <button type="button" data-value="Aluminium">Aluminium</button>
                 <button type="button" data-value="Hout">Hout</button>
+                <button type="button" data-value="Staal">Staal</button>
               </div>
             </fieldset>
 
@@ -155,6 +165,14 @@
                 <button type="button" data-value="#24282d" data-label="Antraciet" style="--swatch:#24282d"><span>Antraciet</span></button>
                 <button type="button" data-value="#111111" data-label="Zwart" style="--swatch:#111111"><span>Zwart</span></button>
                 <button type="button" data-value="#8b5f3f" data-label="Houtlook" style="--swatch:#8b5f3f"><span>Houtlook</span></button>
+                <button type="button" data-value="#b98b4b" data-label="Golden oak" style="--swatch:#b98b4b"><span>Golden oak</span></button>
+                <button type="button" data-value="#5a3827" data-label="Walnut" style="--swatch:#5a3827"><span>Walnut</span></button>
+                <button type="button" data-value="#d8c4a0" data-label="Natural oak" style="--swatch:#d8c4a0"><span>Natural oak</span></button>
+                <button type="button" data-value="#6d4c41" data-label="Dark oak" style="--swatch:#6d4c41"><span>Dark oak</span></button>
+                <button type="button" data-value="#ede7dc" data-label="Structural white" style="--swatch:#ede7dc"><span>Structural white</span></button>
+                <button type="button" data-value="#3b4145" data-label="Anthracite sand" style="--swatch:#3b4145"><span>Anthracite sand</span></button>
+                <button type="button" data-value="#9b6b3d" data-label="Winchester" style="--swatch:#9b6b3d"><span>Winchester</span></button>
+                <button type="button" data-value="#4b3a33" data-label="RAL 8019" style="--swatch:#4b3a33"><span>RAL 8019</span></button>
               </div>
             </fieldset>
 
@@ -166,6 +184,10 @@
               <label>
                 Hoogte in cm
                 <input id="height-input" type="number" min="60" max="280" value="140">
+              </label>
+              <label class="length-field">
+                Diepte/lengte in cm
+                <input id="depth-input" type="number" min="80" max="700" value="250">
               </label>
             </div>
 
@@ -187,7 +209,7 @@
             <div class="price-box">
               <div>
                 <span>Voorlopige richtprijs</span>
-                <strong id="price-output">vanaf €1.450</strong>
+                <strong id="price-output">vanaf EUR 1.450</strong>
                 <p>Exacte prijs na opmeting en controle.</p>
               </div>
               <button class="primary-button" type="button" data-open-modal="quote">Offerte aanvragen</button>
@@ -196,10 +218,10 @@
         </div>
       </section>
 
-      <section class="products-strip" aria-labelledby="products-title">
+      <section class="products-strip" id="producten" aria-labelledby="products-title">
         <div class="section-head compact">
-          <p>Hoofdproducten</p>
-          <h2 id="products-title">Start met de belangrijkste keuzes</h2>
+          <p>Producten</p>
+          <h2 id="products-title">Alle categorieen die Bluepen kan aanbieden</h2>
         </div>
         <div class="products-grid">
           <button class="product-card active" type="button" data-product-shortcut="ramen">
@@ -213,6 +235,26 @@
           <button class="product-card" type="button" data-product-shortcut="schuiframen">
             <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/systemy-przesuwne.png" alt="Schuiframen">
             <span>Schuiframen</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="horren">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/moskitiery.png" alt="Horren">
+            <span>Horren</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="rolluiken">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/rolety.png" alt="Rolluiken">
+            <span>Rolluiken</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="garagepoorten">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/bramy-conf.png" alt="Garagepoorten">
+            <span>Garagepoorten</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="afsluitingen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/ogrodzenia.png" alt="Afsluitingen">
+            <span>Afsluitingen</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="pergolas">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/pergole.png" alt="Pergola's">
+            <span>Pergola's</span>
           </button>
         </div>
       </section>
@@ -246,7 +288,14 @@
       <div class="footer-grid">
         <section>
           <h2>Bluepen</h2>
-          <p>Ramen, deuren en schuiframen op maat voor renovatie en nieuwbouw.</p>
+          <p>Ramen, deuren, schuiframen, rolluiken, garagepoorten, afsluitingen en pergola's op maat.</p>
+        </section>
+        <section>
+          <h2>Producten</h2>
+          <a href="#configurator" data-footer-product="ramen">Ramen</a>
+          <a href="#configurator" data-footer-product="deuren">Deuren</a>
+          <a href="#configurator" data-footer-product="schuiframen">Schuiframen</a>
+          <a href="#configurator" data-footer-product="rolluiken">Rolluiken</a>
         </section>
         <section>
           <h2>Contact</h2>
@@ -259,6 +308,9 @@
           <p>Sint-Elooistraat 2</p>
           <p>9820 Gent</p>
           <p>BTW: BE0729773461</p>
+          <a href="privacy.html">Privacybeleid</a>
+          <a href="voorwaarden.html">Algemene voorwaarden</a>
+          <a href="cookies.html">Cookiebeleid</a>
         </section>
       </div>
       <p class="copyright">&copy; 2026 Bluepen</p>
