@@ -1,4 +1,4 @@
-# Bluepen Window4U Site
+# Bluepen Website
 
 Static website voor Bluepen ramen en deuren.
 

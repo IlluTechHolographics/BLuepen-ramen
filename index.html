@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bluepen | Ramen en deuren configurator</title>
-    <meta name="description" content="Bluepen ramen en deuren in aluminium, pvc en hout. Configureer ramen, deuren, schuifsystemen, horren, rolluiken, garagepoorten, afsluitingen en pergola's online.">
+    <title>Bluepen | Configureer ramen en deuren op maat</title>
+    <meta name="description" content="Configureer ramen, deuren en schuiframen bij Bluepen in Gent. Kies materiaal, kleur, afmetingen en opties en vraag een duidelijke offerte aan.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -15,13 +15,13 @@
         <span></span>
       </button>
       <a class="brand" href="#home" aria-label="Bluepen home">
-        <span class="brand-mark">w4u</span>
-        <span class="brand-name">window4u</span>
+        <span class="brand-mark">B</span>
+        <span class="brand-name">Bluepen</span>
       </a>
       <div class="header-actions">
-        <a class="basket" href="#offerte" aria-label="Offertemandje">
+        <a class="basket" href="#configurator" aria-label="Offerte aanvraag">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2h2l3.4 7.2-1.2 2.1a2 2 0 0 0 1.8 3h9v-2h-9l1-2h7.5a2 2 0 0 0 1.8-1.1l3-6.2h-15.7l-.9-2zM10 21a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
-          <span>0</span>
+          <span>1</span>
         </a>
         <button class="language" type="button">Nederlands</button>
       </div>
@@ -37,131 +37,216 @@
       </div>
       <nav>
         <a class="active" href="#home">Hoofdpagina</a>
-        <a href="#producten">Product configurator</a>
-        <a href="#offerte" data-open-modal="quote">Snelle offerte</a>
-        <a href="#afspraak" data-open-modal="meeting">Afspraak maken</a>
-        <a href="#voorwaarden">Reglementen</a>
-        <a href="#bedrijf">Over het bedrijf</a>
+        <a href="#configurator">Configurator</a>
+        <a href="#werkwijze">Werkwijze</a>
+        <a href="#contact" data-open-modal="quote">Offerte aanvragen</a>
+        <a href="#contact" data-open-modal="meeting">Plaatsbezoek</a>
       </nav>
     </aside>
 
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="house-card">
+            <div class="house-roof"></div>
+            <div class="house-body">
+              <div class="house-window large"></div>
+              <div class="house-door"></div>
+              <div class="house-window"></div>
+            </div>
+          </div>
+        </div>
         <div class="hero-inner">
-          <h1 id="hero-title">Ramen en deuren in aluminium, pvc of hout.</h1>
+          <p class="eyebrow">Ramen en deuren op maat in Gent</p>
+          <h1 id="hero-title">Configureer je project en ontvang snel een duidelijke offerte.</h1>
+          <div class="hero-actions">
+            <a class="primary-button" href="#configurator">Start configurator</a>
+            <button class="secondary-button" type="button" data-open-modal="meeting">Afspraak maken</button>
+          </div>
           <div class="quick-options" aria-label="Snel acties">
-            <a class="quick-card" href="#producten">
-              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/calculator-ico.png" alt="">
+            <a class="quick-card" href="#configurator">
+              <span>01</span>
               <h2>Product configurator</h2>
-              <p>Kies een product en stel het online samen in enkele duidelijke stappen.</p>
+              <p>Kies ramen, deuren of schuiframen en stel alles visueel samen.</p>
             </a>
             <button class="quick-card" type="button" data-open-modal="quote">
-              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/question-ico.png" alt="">
+              <span>02</span>
               <h2>Snelle offerte</h2>
-              <p>Stuur je aanvraag door en ontvang snel een voorstel op maat.</p>
+              <p>Ontvang een richtprijs en laat Bluepen je aanvraag opvolgen.</p>
             </button>
             <button class="quick-card" type="button" data-open-modal="meeting">
-              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/wood-quote-ico.png" alt="">
-              <h2>Afspraak maken</h2>
-              <p>Plan een gesprek met Bluepen voor advies, opmeting of plaatsing.</p>
+              <span>03</span>
+              <h2>Plaatsbezoek</h2>
+              <p>Laat je ramen of deuren professioneel opmeten.</p>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="product-section" id="producten" aria-labelledby="products-title">
+      <section class="configurator-section" id="configurator" aria-labelledby="configurator-title">
         <div class="section-head">
           <p>Configurator</p>
-          <h2 id="products-title">Kies het product</h2>
+          <h2 id="configurator-title">Stel je raam of deur samen</h2>
         </div>
-        <div class="products-grid">
-          <a class="product-card" href="#configurator-ramen">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/okna.png" alt="Ramen">
-            <span>Ramen</span>
-          </a>
-          <a class="product-card" href="#configurator-deuren">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/drzwi-wejsciowe.png" alt="Deuren">
-            <span>Deuren</span>
-          </a>
-          <a class="product-card" href="#configurator-schuifsystemen">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/systemy-przesuwne.png" alt="Schuifsystemen">
-            <span>Schuifsystemen</span>
-          </a>
-          <a class="product-card" href="#configurator-horren">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/moskitiery.png" alt="Horren">
-            <span>Horren</span>
-          </a>
-          <a class="product-card" href="#configurator-rolluiken">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/rolety.png" alt="Rolluiken">
-            <span>Rolluiken</span>
-          </a>
-          <a class="product-card" href="#configurator-garagepoorten">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/bramy-conf.png" alt="Garagepoorten">
-            <span>Garagepoorten</span>
-          </a>
-          <a class="product-card" href="#configurator-afsluitingen">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/ogrodzenia.png" alt="Afsluitingen">
-            <span>Afsluitingen</span>
-          </a>
-          <a class="product-card" href="#configurator-pergolas">
-            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/pergole.png" alt="Pergola's">
-            <span>Pergola's</span>
-          </a>
+
+        <div class="configurator-shell">
+          <div class="preview-panel">
+            <div class="preview-stage">
+              <div class="measurement width"><span id="width-label">160 cm</span></div>
+              <div class="measurement height"><span id="height-label">140 cm</span></div>
+              <div class="pseudo-product" id="pseudo-product" aria-label="Visuele preview"></div>
+              <div class="floor-shadow"></div>
+            </div>
+            <div class="preview-meta">
+              <div>
+                <p>Geselecteerd</p>
+                <strong id="summary-title">Ramen - Dubbel raam</strong>
+              </div>
+              <span id="summary-material">PVC / Standaard</span>
+            </div>
+          </div>
+
+          <form class="configurator-form" id="quote-form">
+            <fieldset>
+              <legend>1. Kies product</legend>
+              <div class="segmented" data-config-group="product">
+                <button class="active" type="button" data-value="ramen">Ramen</button>
+                <button type="button" data-value="deuren">Deuren</button>
+                <button type="button" data-value="schuiframen">Schuiframen</button>
+              </div>
+            </fieldset>
+
+            <label>
+              2. Kies type
+              <select id="type-select" name="type"></select>
+            </label>
+
+            <fieldset>
+              <legend>3. Materiaal</legend>
+              <div class="segmented" data-config-group="material">
+                <button class="active" type="button" data-value="PVC">PVC</button>
+                <button type="button" data-value="Aluminium">Aluminium</button>
+                <button type="button" data-value="Hout">Hout</button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>4. Pakket</legend>
+              <div class="package-grid" data-config-group="package">
+                <button type="button" data-value="Economisch">
+                  <strong>Economisch</strong>
+                  <span>Prijsbewuste renovatie</span>
+                </button>
+                <button class="active" type="button" data-value="Standaard">
+                  <strong>Standaard</strong>
+                  <span>Beste balans</span>
+                </button>
+                <button type="button" data-value="Premium">
+                  <strong>Premium</strong>
+                  <span>Maximaal comfort</span>
+                </button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>5. Kleur</legend>
+              <div class="swatches" data-config-group="color">
+                <button class="active" type="button" data-value="#f6f7f8" data-label="Wit" style="--swatch:#f6f7f8"><span>Wit</span></button>
+                <button type="button" data-value="#24282d" data-label="Antraciet" style="--swatch:#24282d"><span>Antraciet</span></button>
+                <button type="button" data-value="#111111" data-label="Zwart" style="--swatch:#111111"><span>Zwart</span></button>
+                <button type="button" data-value="#8b5f3f" data-label="Houtlook" style="--swatch:#8b5f3f"><span>Houtlook</span></button>
+              </div>
+            </fieldset>
+
+            <div class="size-grid">
+              <label>
+                6. Breedte in cm
+                <input id="width-input" type="number" min="60" max="420" value="160">
+              </label>
+              <label>
+                Hoogte in cm
+                <input id="height-input" type="number" min="60" max="280" value="140">
+              </label>
+            </div>
+
+            <fieldset>
+              <legend>7. Extra opties</legend>
+              <div class="check-list">
+                <label><input type="checkbox" value="triple"> Driedubbel glas</label>
+                <label><input type="checkbox" value="ventilation"> Ventilatierooster</label>
+                <label><input type="checkbox" value="placement" checked> Plaatsing door Bluepen</label>
+              </div>
+            </fieldset>
+
+            <label class="upload-box">
+              8. Upload foto van je situatie
+              <input id="photo-input" type="file" accept="image/*">
+              <span id="photo-status">Sleep of kies een foto voor betere inschatting.</span>
+            </label>
+
+            <div class="price-box">
+              <div>
+                <span>Voorlopige richtprijs</span>
+                <strong id="price-output">vanaf €1.450</strong>
+                <p>Exacte prijs na opmeting en controle.</p>
+              </div>
+              <button class="primary-button" type="button" data-open-modal="quote">Offerte aanvragen</button>
+            </div>
+          </form>
         </div>
       </section>
 
-      <section class="config-section" aria-labelledby="config-title">
-        <div class="config-copy">
-          <p>Online samenstellen</p>
-          <h2 id="config-title">Van idee naar offerte zonder omwegen</h2>
-          <span>Kies producttype, materiaal, kleur en afmetingen. Daarna kan Bluepen de aanvraag opvolgen met prijs, advies en plaatsing.</span>
+      <section class="products-strip" aria-labelledby="products-title">
+        <div class="section-head compact">
+          <p>Hoofdproducten</p>
+          <h2 id="products-title">Start met de belangrijkste keuzes</h2>
         </div>
-        <form class="configurator" id="offerte">
-          <label>
-            Product
-            <select name="product">
-              <option>Ramen</option>
-              <option>Deuren</option>
-              <option>Schuifsystemen</option>
-              <option>Rolluiken</option>
-              <option>Garagepoorten</option>
-              <option>Pergola's</option>
-            </select>
-          </label>
-          <label>
-            Materiaal
-            <select name="materiaal">
-              <option>PVC</option>
-              <option>Aluminium</option>
-              <option>Hout</option>
-            </select>
-          </label>
-          <label>
-            Afmeting
-            <input type="text" name="afmeting" placeholder="bijv. 120 x 140 cm">
-          </label>
-          <button class="primary-button" type="button" data-open-modal="quote">Vraag offerte aan</button>
-        </form>
+        <div class="products-grid">
+          <button class="product-card active" type="button" data-product-shortcut="ramen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/okna.png" alt="Ramen">
+            <span>Ramen</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="deuren">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/drzwi-wejsciowe.png" alt="Deuren">
+            <span>Deuren</span>
+          </button>
+          <button class="product-card" type="button" data-product-shortcut="schuiframen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/systemy-przesuwne.png" alt="Schuiframen">
+            <span>Schuiframen</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="process-section" id="werkwijze" aria-labelledby="process-title">
+        <div class="section-head compact">
+          <p>Werkwijze</p>
+          <h2 id="process-title">Van configuratie naar plaatsing</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>1</span>
+            <h3>Configureer</h3>
+            <p>Kies product, materiaal, kleur, afmetingen en opties.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Ontvang richtprijs</h3>
+            <p>Je krijgt meteen een duidelijke voorlopige prijsindicatie.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Laat opmeten</h3>
+            <p>Bluepen controleert de situatie en maakt de offerte definitief.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="bedrijf">
+    <footer class="site-footer" id="contact">
       <div class="footer-grid">
         <section>
-          <h2>Producten</h2>
-          <a href="#producten">Ramen</a>
-          <a href="#producten">Deuren</a>
-          <a href="#producten">Schuifsystemen</a>
-          <a href="#producten">Horren</a>
-          <a href="#producten">Rolluiken</a>
-          <a href="#producten">Garagepoorten</a>
-          <a href="#producten">Afsluitingen</a>
-          <a href="#producten">Pergola's</a>
-        </section>
-        <section id="voorwaarden">
-          <h2>Reglementen</h2>
-          <a href="#voorwaarden">Algemene voorwaarden</a>
-          <a href="#voorwaarden">Privacybeleid</a>
+          <h2>Bluepen</h2>
+          <p>Ramen, deuren en schuiframen op maat voor renovatie en nieuwbouw.</p>
         </section>
         <section>
           <h2>Contact</h2>
@@ -171,18 +256,16 @@
         </section>
         <section>
           <h2>Bedrijfsinformatie</h2>
-          <p>Bluepen</p>
           <p>Sint-Elooistraat 2</p>
           <p>9820 Gent</p>
           <p>BTW: BE0729773461</p>
         </section>
       </div>
-      <p class="copyright">&copy; 2026 Bluepen window4u</p>
+      <p class="copyright">&copy; 2026 Bluepen</p>
     </footer>
 
     <div class="cookie-bar" role="dialog" aria-label="Cookie melding">
-      <img src="https://d3go3e0145fp2e.cloudfront.net/img/icons/icon_cookies.svg" alt="">
-      <p>Deze website gebruikt cookies om inhoud te verbeteren, aanvragen te verwerken en websiteverkeer te analyseren.</p>
+      <p>Deze website gebruikt cookies om aanvragen te verwerken en websiteverkeer te analyseren.</p>
       <div>
         <button type="button" class="secondary-button cookie-close">Niet accepteren</button>
         <button type="button" class="primary-button cookie-close">Ik accepteer</button>
@@ -192,11 +275,12 @@
     <dialog class="modal" id="quote-modal">
       <form method="dialog">
         <button class="modal-close" aria-label="Sluiten">x</button>
-        <h2>Snelle offerte</h2>
+        <h2>Offerte aanvragen</h2>
+        <p class="modal-note">Je configuratie wordt als richtlijn gebruikt. Bluepen neemt contact op voor controle en opmeting.</p>
         <label>Naam<input type="text" placeholder="Je naam"></label>
         <label>E-mail<input type="email" placeholder="naam@email.be"></label>
         <label>Telefoon<input type="tel" placeholder="+32 ..."></label>
-        <label>Bericht<textarea placeholder="Beschrijf je project"></textarea></label>
+        <label>Bericht<textarea id="quote-message" placeholder="Beschrijf je project"></textarea></label>
         <button class="primary-button">Verstuur aanvraag</button>
       </form>
     </dialog>
@@ -204,7 +288,7 @@
     <dialog class="modal" id="meeting-modal">
       <form method="dialog">
         <button class="modal-close" aria-label="Sluiten">x</button>
-        <h2>Afspraak maken</h2>
+        <h2>Plaatsbezoek plannen</h2>
         <label>Naam<input type="text" placeholder="Je naam"></label>
         <label>Gewenste datum<input type="date"></label>
         <label>Telefoon<input type="tel" placeholder="+32 ..."></label>
