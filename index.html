@@ -96,6 +96,10 @@
         <div class="configurator-shell">
           <div class="preview-panel">
             <div class="preview-stage">
+              <div class="render-card">
+                <img id="product-render" src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/okna.png" alt="Ramen voorbeeld">
+                <span id="render-label">Ramen</span>
+              </div>
               <div class="measurement width"><span id="width-label">160 cm</span></div>
               <div class="measurement height"><span id="height-label">140 cm</span></div>
               <div class="pseudo-product" id="pseudo-product" aria-label="Visuele preview"></div>
@@ -113,7 +117,7 @@
           <form class="configurator-form" id="quote-form">
             <fieldset>
               <legend>1. Kies product</legend>
-              <div class="segmented" data-config-group="product">
+              <div class="segmented product-tabs" data-config-group="product">
                 <button class="active" type="button" data-value="ramen">Ramen</button>
                 <button type="button" data-value="deuren">Deuren</button>
                 <button type="button" data-value="schuiframen">Schuiframen</button>

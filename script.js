@@ -17,12 +17,15 @@ const summaryMaterial = document.querySelector("#summary-material");
 const quoteMessage = document.querySelector("#quote-message");
 const photoInput = document.querySelector("#photo-input");
 const photoStatus = document.querySelector("#photo-status");
+const productRender = document.querySelector("#product-render");
+const renderLabel = document.querySelector("#render-label");
 const productShortcuts = document.querySelectorAll("[data-product-shortcut]");
 const footerProductLinks = document.querySelectorAll("[data-footer-product]");
 
 const products = {
   ramen: {
     label: "Ramen",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/okna.png",
     types: ["Vast raam", "Draai-kiepraam", "Dubbel raam", "Raam met bovenlicht", "Panoramisch raam", "3-delig raam"],
     materials: ["PVC", "Aluminium", "Hout"],
     defaultType: "Dubbel raam",
@@ -32,6 +35,7 @@ const products = {
   },
   deuren: {
     label: "Deuren",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/drzwi-wejsciowe.png",
     types: ["Voordeur vlak", "Voordeur met glasstrook", "Deur met zijlicht", "Dubbele deur", "Achterdeur", "Moderne paneeldeur"],
     materials: ["PVC", "Aluminium", "Hout"],
     defaultType: "Voordeur met glasstrook",
@@ -41,6 +45,7 @@ const products = {
   },
   schuiframen: {
     label: "Schuiframen",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/systemy-przesuwne.png",
     types: ["2-delig schuifraam", "3-delig schuifraam", "Hefschuifraam", "Panoramisch schuifraam"],
     materials: ["PVC", "Aluminium", "Hout"],
     defaultType: "2-delig schuifraam",
@@ -50,6 +55,7 @@ const products = {
   },
   horren: {
     label: "Horren",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/moskitiery.png",
     types: ["Vaste raamhor", "Inzethor", "Rolhor", "Schuifhor", "Deurhor"],
     materials: ["Aluminium"],
     defaultType: "Vaste raamhor",
@@ -59,6 +65,7 @@ const products = {
   },
   rolluiken: {
     label: "Rolluiken",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/rolety.png",
     types: ["Opbouwrolluik", "Voorzetrolluik", "Inbouwrolluik", "Screens", "Gevelzonwering"],
     materials: ["Aluminium", "PVC"],
     defaultType: "Opbouwrolluik",
@@ -68,6 +75,7 @@ const products = {
   },
   garagepoorten: {
     label: "Garagepoorten",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/bramy-conf.png",
     types: ["Sectionaalpoort", "Rolpoort", "Poort met vlak paneel", "Poort met belijning", "Automatische garagepoort"],
     materials: ["Aluminium", "Staal"],
     defaultType: "Sectionaalpoort",
@@ -77,6 +85,7 @@ const products = {
   },
   afsluitingen: {
     label: "Afsluitingen",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/ogrodzenia.png",
     types: ["Tuinpoort", "Schuifpoort", "Draaipoort", "Moderne afsluiting", "Spijlenhek"],
     materials: ["Aluminium", "Staal"],
     defaultType: "Moderne afsluiting",
@@ -86,6 +95,7 @@ const products = {
   },
   pergolas: {
     label: "Pergola's",
+    image: "https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/pergole.png",
     types: ["Vrijstaande pergola", "Pergola aan gevel", "Lamellendak", "Pergola met screen", "Terrasoverkapping"],
     materials: ["Aluminium"],
     defaultType: "Pergola aan gevel",
@@ -181,11 +191,25 @@ function darken(hex) {
   return "#111820";
 }
 
+function edgeColor(hex) {
+  if (hex === "#f6f7f8" || hex === "#ede7dc") {
+    return "#2b3641";
+  }
+  if (hex === "#d8c4a0" || hex === "#b98b4b") {
+    return "#6f4a24";
+  }
+  return hex;
+}
+
 function renderPreview() {
   preview.style.setProperty("--product-color", config.color);
   preview.style.setProperty("--product-dark", darken(config.color));
+  preview.style.setProperty("--product-edge", edgeColor(config.color));
   preview.style.setProperty("--w", Math.min(Math.max(config.width / 160, .8), 1.55));
   preview.style.setProperty("--h", Math.min(Math.max(config.height / 140, .82), 1.38));
+  productRender.src = products[config.product].image;
+  productRender.alt = `${products[config.product].label} voorbeeld`;
+  renderLabel.textContent = products[config.product].label;
 
   if (config.product === "deuren") {
     const glass = config.type.includes("glas") || config.type.includes("zijlicht");
