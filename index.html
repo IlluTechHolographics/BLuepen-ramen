@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bluepen | Ramen en deuren configurator</title>
+    <meta name="description" content="Bluepen ramen en deuren in aluminium, pvc en hout. Configureer ramen, deuren, schuifsystemen, horren, rolluiken, garagepoorten, afsluitingen en pergola's online.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Hoofdnavigatie">
+      <button class="icon-button menu-toggle" type="button" aria-label="Menu openen" aria-controls="drawer" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#home" aria-label="Bluepen home">
+        <span class="brand-mark">w4u</span>
+        <span class="brand-name">window4u</span>
+      </a>
+      <div class="header-actions">
+        <a class="basket" href="#offerte" aria-label="Offertemandje">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2h2l3.4 7.2-1.2 2.1a2 2 0 0 0 1.8 3h9v-2h-9l1-2h7.5a2 2 0 0 0 1.8-1.1l3-6.2h-15.7l-.9-2zM10 21a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+          <span>0</span>
+        </a>
+        <button class="language" type="button">Nederlands</button>
+      </div>
+    </header>
+
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div class="dealer">
+        <div class="dealer-icon" aria-hidden="true"></div>
+        <div>
+          <p>Bluepen</p>
+          <span>9820 Gent, BE</span>
+        </div>
+      </div>
+      <nav>
+        <a class="active" href="#home">Hoofdpagina</a>
+        <a href="#producten">Product configurator</a>
+        <a href="#offerte" data-open-modal="quote">Snelle offerte</a>
+        <a href="#afspraak" data-open-modal="meeting">Afspraak maken</a>
+        <a href="#voorwaarden">Reglementen</a>
+        <a href="#bedrijf">Over het bedrijf</a>
+      </nav>
+    </aside>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <h1 id="hero-title">Ramen en deuren in aluminium, pvc of hout.</h1>
+          <div class="quick-options" aria-label="Snel acties">
+            <a class="quick-card" href="#producten">
+              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/calculator-ico.png" alt="">
+              <h2>Product configurator</h2>
+              <p>Kies een product en stel het online samen in enkele duidelijke stappen.</p>
+            </a>
+            <button class="quick-card" type="button" data-open-modal="quote">
+              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/question-ico.png" alt="">
+              <h2>Snelle offerte</h2>
+              <p>Stuur je aanvraag door en ontvang snel een voorstel op maat.</p>
+            </button>
+            <button class="quick-card" type="button" data-open-modal="meeting">
+              <img src="https://d3go3e0145fp2e.cloudfront.net/img/wood/wood-quote-ico.png" alt="">
+              <h2>Afspraak maken</h2>
+              <p>Plan een gesprek met Bluepen voor advies, opmeting of plaatsing.</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section" id="producten" aria-labelledby="products-title">
+        <div class="section-head">
+          <p>Configurator</p>
+          <h2 id="products-title">Kies het product</h2>
+        </div>
+        <div class="products-grid">
+          <a class="product-card" href="#configurator-ramen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/okna.png" alt="Ramen">
+            <span>Ramen</span>
+          </a>
+          <a class="product-card" href="#configurator-deuren">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/drzwi-wejsciowe.png" alt="Deuren">
+            <span>Deuren</span>
+          </a>
+          <a class="product-card" href="#configurator-schuifsystemen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/systemy-przesuwne.png" alt="Schuifsystemen">
+            <span>Schuifsystemen</span>
+          </a>
+          <a class="product-card" href="#configurator-horren">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/moskitiery.png" alt="Horren">
+            <span>Horren</span>
+          </a>
+          <a class="product-card" href="#configurator-rolluiken">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/rolety.png" alt="Rolluiken">
+            <span>Rolluiken</span>
+          </a>
+          <a class="product-card" href="#configurator-garagepoorten">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/bramy-conf.png" alt="Garagepoorten">
+            <span>Garagepoorten</span>
+          </a>
+          <a class="product-card" href="#configurator-afsluitingen">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/ogrodzenia.png" alt="Afsluitingen">
+            <span>Afsluitingen</span>
+          </a>
+          <a class="product-card" href="#configurator-pergolas">
+            <img src="https://d3go3e0145fp2e.cloudfront.net/img/all-in-one/pergole.png" alt="Pergola's">
+            <span>Pergola's</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="config-section" aria-labelledby="config-title">
+        <div class="config-copy">
+          <p>Online samenstellen</p>
+          <h2 id="config-title">Van idee naar offerte zonder omwegen</h2>
+          <span>Kies producttype, materiaal, kleur en afmetingen. Daarna kan Bluepen de aanvraag opvolgen met prijs, advies en plaatsing.</span>
+        </div>
+        <form class="configurator" id="offerte">
+          <label>
+            Product
+            <select name="product">
+              <option>Ramen</option>
+              <option>Deuren</option>
+              <option>Schuifsystemen</option>
+              <option>Rolluiken</option>
+              <option>Garagepoorten</option>
+              <option>Pergola's</option>
+            </select>
+          </label>
+          <label>
+            Materiaal
+            <select name="materiaal">
+              <option>PVC</option>
+              <option>Aluminium</option>
+              <option>Hout</option>
+            </select>
+          </label>
+          <label>
+            Afmeting
+            <input type="text" name="afmeting" placeholder="bijv. 120 x 140 cm">
+          </label>
+          <button class="primary-button" type="button" data-open-modal="quote">Vraag offerte aan</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="bedrijf">
+      <div class="footer-grid">
+        <section>
+          <h2>Producten</h2>
+          <a href="#producten">Ramen</a>
+          <a href="#producten">Deuren</a>
+          <a href="#producten">Schuifsystemen</a>
+          <a href="#producten">Horren</a>
+          <a href="#producten">Rolluiken</a>
+          <a href="#producten">Garagepoorten</a>
+          <a href="#producten">Afsluitingen</a>
+          <a href="#producten">Pergola's</a>
+        </section>
+        <section id="voorwaarden">
+          <h2>Reglementen</h2>
+          <a href="#voorwaarden">Algemene voorwaarden</a>
+          <a href="#voorwaarden">Privacybeleid</a>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <a href="tel:+32468127090">+32 468 12 70 90</a>
+          <a href="mailto:Bluepen@outlook.be">Bluepen@outlook.be</a>
+          <a href="https://www.facebook.com/BLUEPENRAMENENDEUREN" target="_blank" rel="noopener">Facebook</a>
+        </section>
+        <section>
+          <h2>Bedrijfsinformatie</h2>
+          <p>Bluepen</p>
+          <p>Sint-Elooistraat 2</p>
+          <p>9820 Gent</p>
+          <p>BTW: BE0729773461</p>
+        </section>
+      </div>
+      <p class="copyright">&copy; 2026 Bluepen window4u</p>
+    </footer>
+
+    <div class="cookie-bar" role="dialog" aria-label="Cookie melding">
+      <img src="https://d3go3e0145fp2e.cloudfront.net/img/icons/icon_cookies.svg" alt="">
+      <p>Deze website gebruikt cookies om inhoud te verbeteren, aanvragen te verwerken en websiteverkeer te analyseren.</p>
+      <div>
+        <button type="button" class="secondary-button cookie-close">Niet accepteren</button>
+        <button type="button" class="primary-button cookie-close">Ik accepteer</button>
+      </div>
+    </div>
+
+    <dialog class="modal" id="quote-modal">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Sluiten">x</button>
+        <h2>Snelle offerte</h2>
+        <label>Naam<input type="text" placeholder="Je naam"></label>
+        <label>E-mail<input type="email" placeholder="naam@email.be"></label>
+        <label>Telefoon<input type="tel" placeholder="+32 ..."></label>
+        <label>Bericht<textarea placeholder="Beschrijf je project"></textarea></label>
+        <button class="primary-button">Verstuur aanvraag</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="meeting-modal">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Sluiten">x</button>
+        <h2>Afspraak maken</h2>
+        <label>Naam<input type="text" placeholder="Je naam"></label>
+        <label>Gewenste datum<input type="date"></label>
+        <label>Telefoon<input type="tel" placeholder="+32 ..."></label>
+        <button class="primary-button">Plan afspraak</button>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

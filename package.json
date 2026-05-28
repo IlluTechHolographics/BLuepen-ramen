@@ -1,0 +1,10 @@
+{
+  "name": "bluepen-window4u-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Bluepen ramen en deuren website, ready for Vercel deployment.",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo \"Static site: no build step required\""
+  }
+}
